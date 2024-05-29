@@ -77,7 +77,7 @@ postgresql.datasource.password=some_password
 Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. 
 
 In Zephyr Squad the Test Case Executions look like:
-![Squad Test Case Executions]([https://github.com/matthewrbonner/SquadToScale/blob/main/Migration-Script-DB/readMeImages/SquadTestCase_Executions.png)
+![Squad Test Case Executions](https://github.com/matthewrbonner/SquadToScale/blob/main/Migration-Script-DB/readMeImages/SquadTestCase_Executions.png)
 
 
 In Zephyr Scale the Test Case Executions will look like:
