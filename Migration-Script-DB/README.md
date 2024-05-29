@@ -1,6 +1,6 @@
 # Squad to Scale Migration Script
 
-This script executes a Migration From Zephyr Squad to Zephyr Scale on Server, with both apps on the same Jira instance.
+This script executes a Migration From Zephyr Squad to Zephyr Scale on Server or Data Center, with both apps on the same Jira instance.
 It uses Jira, Squad and Scale APIs to read and insert entities. It also executes some queries on Zephyr Scale Database
 to fetch complementary data to help the migration.
 
