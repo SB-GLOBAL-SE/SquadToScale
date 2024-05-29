@@ -27,7 +27,7 @@ The following Zephyr Squad Entities are migrated to Zephyr Scale:
 - Test Steps
    - Zephyr Squad Test Steps are mapped 1 to 1 to Zephyr Scale Test Steps, on the associated Test Case. 
 - Cycles
-   - Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. Find out more in * [Cycle differences](#cycle-differences)
+   - Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. Find out more in: [Cycle differences](#cycle-differences)
 - Test Executions
    - Zephyr Squad Test Executions are mapped 1 to 1 to Zephyr Scale Test Executions. 
 - Attachments for Test Cases, Steps and Executions
