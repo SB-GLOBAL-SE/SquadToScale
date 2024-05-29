@@ -86,7 +86,7 @@ In Zephyr Scale the Test Case Executions will look like:
 The executions will migrate by Test Case, where each Test Cycle will contain all executions for a single Test Case.
 
 
-The reason behind this is in Zephyr Squad, a Test Execution can be associate to multiple Test Cycles, Versions and Folders. In Zephyr Scale each Test Execution is apart of a single Test Cycle, Version and Folder. We pass the Test Cycle name, Folder name and Version from Squad using custom fields created during runtime. The solution is to migrate the Test Executions in iterations of Test Cases. 
+The reason behind this is in Zephyr Squad, a Test Execution can be associate to multiple Test Cycles, Versions and Folders. In Zephyr Scale each Test Case(s) Test Execution(s) are apart of a single Test Cycle, Version and Folder. We pass the Test Cycle name, Folder name and Version from Squad using custom fields created during runtime. The solution is to migrate the Test Executions in iterations of Test Cases. 
 
 ## Execution
 
