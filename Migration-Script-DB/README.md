@@ -1,6 +1,6 @@
 # Squad to Scale Migration Script
 
-This script executes a Migration From Zephyr Squad to Zephyr Scale on Server, with both apps o the same instance.
+This script executes a Migration From Zephyr Squad to Zephyr Scale on Server, with both apps on the same Jira instance.
 It uses Jira, Squad and Scale APIs to read and insert entities. It also executes some queries on Zephyr Scale Database
 to fetch complementary data to help the migration.
 
@@ -11,8 +11,10 @@ to fetch complementary data to help the migration.
     * [Properties setup](#properties-setup)
         * [app.properties](#appproperties)
         * [database.properties](#databaseproperties)
+    * [Cycle differences](#cycle-differences)
     * [Execution](#execution)
         * [Steps](#steps)
+      
 
 <!-- TOC -->
 
@@ -21,10 +23,14 @@ to fetch complementary data to help the migration.
 The following Zephyr Squad Entities are migrated to Zephyr Scale:
 
 - Test Cases
+   - Zephyr Squad Test Cases are mapped 1 to 1 to Zephyr Scale Test Cases.    
 - Test Steps
+   - Zephyr Squad Test Steps are mapped 1 to 1 to Zephyr Scale Test Steps, on the associated Test Case. 
 - Cycles
+   - Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. Find out more in (#cycle-differences)
 - Test Executions
-- Attachments from Test Cases, Steps and Executions
+   - Zephyr Squad Test Executions are mapped 1 to 1 to Zephyr Scale Test Executions. 
+- Attachments for Test Cases, Steps and Executions
 
 ## Properties setup
 
@@ -65,6 +71,11 @@ postgresql.datasource.driver.class.name=org.postgresql.Driver
 postgresql.datasource.username=some_username
 postgresql.datasource.password=some_password
 ```
+
+## Cycle differences 
+
+Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles.
+The Zephyr Squad Cycle data is mapped to custom fields (created during runtime) 
 
 ## Execution
 
