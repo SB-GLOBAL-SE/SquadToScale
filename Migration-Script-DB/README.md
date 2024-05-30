@@ -27,7 +27,7 @@ The following Zephyr Squad Entities are migrated to Zephyr Scale:
 - Test Steps
    - Zephyr Squad Test Steps are mapped 1 to 1 to Zephyr Scale Test Steps, on the associated Test Case. 
 - Cycles
-   - Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. Find out more in: [Cycle differences](#cycle-differences)
+   - Zephyr Squad Test Cycles are mapped 1 to 1 to Zephyr Scale Test Cycles. 
 - Test Executions
    - Zephyr Squad Test Executions are mapped 1 to 1 to Zephyr Scale Test Executions. 
 - Attachments for Test Cases, Steps and Executions
@@ -71,22 +71,6 @@ postgresql.datasource.driver.class.name=org.postgresql.Driver
 postgresql.datasource.username=some_username
 postgresql.datasource.password=some_password
 ```
-
-## Cycle differences 
-
-Zephyr Squad Test Cycles are NOT mapped 1 to 1 to Zephyr Scale Test Cycles. 
-
-In Zephyr Squad the Test Case Executions look like:
-![Squad Test Case Executions](https://github.com/matthewrbonner/SquadToScale/blob/main/Migration-Script-DB/readMeImages/SquadTestCase_Executions.png)
-
-
-In Zephyr Scale the Test Case Executions will look like:
-![Scale Test Case Executions](https://github.com/matthewrbonner/SquadToScale/blob/main/Migration-Script-DB/readMeImages/ScaleTestCase_Executions.png)
-
-The executions will migrate by Test Case, where each Test Cycle will contain all executions for a single Test Case.
-
-
-The reason behind this is in Zephyr Squad, a Test Execution can be associate to multiple Test Cycles, Versions and Folders. In Zephyr Scale each Test Case(s) Test Execution(s) are apart of a single Test Cycle, Version and Folder. We pass the Test Cycle name, Folder name and Version from Squad using custom fields created during runtime. The solution is to migrate the Test Executions in iterations of Test Cases. 
 
 ## Execution
 
