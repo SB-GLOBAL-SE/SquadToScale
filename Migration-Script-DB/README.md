@@ -11,7 +11,6 @@ to fetch complementary data to help the migration. This migration will COPY data
     * [Properties setup](#properties-setup)
         * [app.properties](#appproperties)
         * [database.properties](#databaseproperties)
-    * [Cycle differences](#cycle-differences)
     * [Execution](#execution)
         * [Steps](#steps)
       
