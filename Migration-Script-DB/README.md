@@ -143,8 +143,6 @@ The script has two different executions modes:
 
 **How to determine host, database.url, and username/password**
 
-### Determining Jira Attachments Base Folder, Base URL, Database URL, and Database Credentials
-
 #### 1. **Determine Attachments Base Folder**
 
 To locate the base folder where Jira stores attachments:
@@ -217,7 +215,7 @@ Ensure that you have access to the server where Jira is installed, as these file
      java -jar app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar <jira_api_username> <jira_api_password> [PROJECT KEY]
      ```
 
-2. **Import Attachments CSV in Database:**
+2. **Import Attachments CSV into the Database:**
    - Import the generated attachments CSV into the Zephyr Scale Table `AO_4D28DD_ATTACHMENT` table.
       IE:
      ```bash
