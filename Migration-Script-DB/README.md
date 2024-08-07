@@ -83,7 +83,7 @@ The script has two different executions modes:
 1. Move the JAR file alongside both `app.properties` and `database.properties` (already configured) to the machine
    holding Jira instance
 2. Execute the JAR in the command
-   line: `java -jar squadToScale.jar <jira_api_username> <jira_api_password> [PROJECT KEY]`
+   line: `java -jar app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar <jira_api_username> <jira_api_password> [PROJECT KEY]`
 3. Wait for it to finish. The process will print several logs on the screen where you can check its progress. It will
    also generate a `app.log` file with te logs being generated
 4. If successful, a csv file will be generated with the name configured in `app.properties`
