@@ -215,6 +215,8 @@ Ensure that you have access to the server where Jira is installed, as these file
      java -jar app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar <jira_api_username> <jira_api_password> [PROJECT KEY]
      ```
 
+   - Confirm migration was successful, look for "Migration completed." at the bottom of the terminal or application.log
+
 2. **Import Attachments CSV into the Database:**
    - Import the generated attachments CSV into the Zephyr Scale Table `AO_4D28DD_ATTACHMENT` table.
       IE:
