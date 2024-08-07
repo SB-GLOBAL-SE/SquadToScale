@@ -82,7 +82,7 @@ The script has two different executions modes:
 
 1. Move the JAR file alongside both `app.properties` and `database.properties` (already configured) to the machine
    holding Jira instance
-2. Execute the JAR in the command
+2. Execute the JAR in the command on a local Jira node.
    line: `java -jar app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar <jira_api_username> <jira_api_password> [PROJECT KEY]`
 3. Wait for it to finish. The process will print several logs on the screen where you can check its progress. It will
    also generate a `app.log` file with te logs being generated
@@ -112,7 +112,7 @@ The script has two different executions modes:
 
  **Cloning the Repository**
 1. **Clone the Repository:**
-   - Run the following command in a terminal clone the repository:
+   - Run the following command in a terminal clone the repository local to a Jira server node:
      ```bash
      git clone https://github.com/matthewrbonner/SquadToScale.git
      ```
