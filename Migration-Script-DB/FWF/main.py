@@ -1,11 +1,16 @@
 import sys
 import subprocess
 
-# 4 parameters you must modify.
+# 2 parameters you must modify.
+# Jar file name/version you are migrating with
 jar_file_name = 'app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar'
-migrate_statuses = 'start-up.py'
-clean_up = 'clean-up.py'
+# Jira DB name
 db_name = 'Jira'
+
+#Name of start up script 
+migrate_statuses = 'start-up.py'
+#Name of clean up script
+clean_up = 'clean-up.py'
 
 if len(sys.argv) != 4:
     print("Usage: python3 main5.py <username> <password> <project_key>")
