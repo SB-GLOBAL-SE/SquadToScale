@@ -5,7 +5,7 @@ import subprocess
 # Jar file name/version you are migrating with
 jar_file_name = 'app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar'
 # Jira DB name
-db_name = 'Jira'
+db_name = 'jira'
 
 #Name of start up script 
 migrate_statuses = 'start-up.py'
