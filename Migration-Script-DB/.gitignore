@@ -4,5 +4,4 @@
 # Ignore properties files
 *.properties
 
-# Ignore readMe files (case insensitive)
-readMe*
+
