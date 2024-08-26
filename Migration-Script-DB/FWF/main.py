@@ -16,7 +16,6 @@ if len(sys.argv) != 4:
     print("Usage: python3 main5.py <username> <password> <project_key>")
     sys.exit(1)
 
-# Extract command-line arguments
 username = sys.argv[1]
 password = sys.argv[2]
 project_key = sys.argv[3]
@@ -87,10 +86,8 @@ def trigger_jar(jar_file_name, username, password, project_key):
 
 DB_user = get_DB_user()
 
-# Step 1: Trigger the migrate statuses script and capture the output
 output = trigger_script(migrate_statuses, username, password, project_key)
 
-# Step 2: Extract ID and baseURL from the output
 ID = None
 baseURL = None
 for line in output.splitlines():
@@ -100,16 +97,12 @@ for line in output.splitlines():
         baseURL = line.split("=", 1)[1].strip()
 
 if ID and baseURL:
-    # Step 3: Trigger the JAR file
     trigger_jar(jar_file_name, username, password, project_key)
 
-    # Step 4: Trigger the clean-up script, passing ID and baseURL
     trigger_script(clean_up, ID, baseURL, username, password)
 
-    # Step 5: Execute the database query
     execute_query(DB_user, db_name)
 
-    # Final Step: All steps completed successfully
     print("All processes completed successfully.")
 else:
     print("Failed to capture ID and baseURL from migrate statuses script.")

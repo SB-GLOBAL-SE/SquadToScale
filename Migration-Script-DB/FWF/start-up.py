@@ -30,10 +30,8 @@ default_headers = {
     "Content-Type": "application/json"
 }
 
-# First API call to get issues data
 issues_response = requests.get(query_url, headers=default_headers, auth=mc_auth)
 
-# Check if the request was successful (status code 200)
 if issues_response.status_code == 200:
     response_data = issues_response.json()
 
@@ -56,10 +54,9 @@ else:
     print(f"Error: {issues_response.status_code} - {issues_response.text}\nError details saved to error.txt")
     sys.exit(1)
 
-# Your API endpoint for posting status
 PostStatusURL = f"{base_url}/rest/tests/1.0/testresultstatus"
 
-# Define the two values to loop through
+
 status_list = [
     {
         "name": "Descoped",
@@ -82,7 +79,7 @@ status_list = [
 os.environ['MIGRATION_ID'] = str(project_id)
 os.environ['MIGRATION_BASE_URL'] = base_url
 
-# Iterate through the status_list and send requests
+# Iterate through the status_list and send request to create new status.
 for index, status_details in enumerate(status_list):
     payload = {
         "projectId": int(project_id),
@@ -93,14 +90,11 @@ for index, status_details in enumerate(status_list):
         "items": []
     }
     
-    # Send the request
     response = requests.post(PostStatusURL, json=payload, headers=default_headers, auth=mc_auth)
 
-    # Check if the request was successful (status code 200)
     if response.status_code == 200:
         print(f"Status {index} posted successfully.")
     else:
-        # Write the error to error.txt
         with open("error.txt", "a") as error_file:
             error_file.write(f"Error posting status {index}: {response.status_code} - {response.text}\n")
         print(f"Error posting status {index}. Error details saved to error.txt")
