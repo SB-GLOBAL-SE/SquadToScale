@@ -3,7 +3,7 @@ import subprocess
 
 # 2 parameters you must modify.
 # Jar file name/version you are migrating with
-jar_file_name = 'app-migration-zephyr-1.0.6.0.1-SNAPSHOT-jar-with-dependencies.jar'
+jar_file_name = 'app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar'
 # Jira DB name
 db_name = 'jira'
 
