@@ -2,6 +2,6 @@
 *.log
 
 # Ignore properties files
-#*.properties
+*.properties
 
 
