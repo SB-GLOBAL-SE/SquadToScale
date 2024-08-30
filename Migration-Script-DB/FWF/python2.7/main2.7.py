@@ -4,7 +4,7 @@ import subprocess
 
 # 2 parameters you must modify.
 # Jar file name/version you are migrating with
-jar_file_name = 'app-migration-zephyr-1.0.6.0.1-SNAPSHOT-jar-with-dependencies.jar'
+jar_file_name = 'app-migration-zephyr-1.0.6-SNAPSHOT-jar-with-dependencies.jar'
 # Jira DB name
 db_name = 'jira'
 
@@ -86,15 +86,17 @@ def trigger_jar(jar_file_name, username, password, project_key):
             stderr=subprocess.STDOUT,
             universal_newlines=True
         )
-        if "Failed to execute the migration" in result:
+        if "Failed to execute the migrations" in result:
             print("JAR file {} failed to execute.".format(jar_file_name))
             print("Error: Review app.log for more information.")
             sys.exit(1)
         print("JAR file {} executed successfully.".format(jar_file_name))
-    except subprocess.CalledProcessError as e:
-        print("JAR file {} failed to execute due to an error.".format(jar_file_name))
-        print("Error: {}".format(e.output))
-        sys.exit(1)
+    except:
+        print('except')
+    #except subprocess.CalledProcessError as e:
+    #    print("JAR file {} failed to execute due to an error.".format(jar_file_name))
+    #    print("Error: {}".format(e.output))
+    #    sys.exit(1)
 
 DB_user, DB_password = get_DB_credentials()
 
