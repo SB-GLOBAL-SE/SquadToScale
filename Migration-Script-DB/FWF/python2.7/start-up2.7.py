@@ -9,7 +9,7 @@ if os.path.exists("error.txt"):
     os.remove("error.txt")
 
 if len(sys.argv) != 4:
-    print("Usage: python MigrateSpecificExecutionStatus.py <username> <password> <project_key>")
+    print("Usage: python start-up2.7.py <username> <password> <project_key>")
     sys.exit(1)
 
 with open('app.properties', 'r') as file:
