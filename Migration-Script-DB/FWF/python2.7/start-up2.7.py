@@ -63,7 +63,7 @@ status_list = [
         "color": "#9900ff"
     },
     {
-        "name": "Not Delivered Yet",
+        "name": "Retested",
         "description": "Description for Retested",
         "color": "#ff9966"
     },
